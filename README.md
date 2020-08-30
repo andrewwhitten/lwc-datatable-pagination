@@ -14,9 +14,12 @@ You really should not consider using this if:
 
 1) You want to page through a large number of records
 2) You can write a SOQL query with paging in the Apex Controller class
-3) Look at something like https://github.com/Sarveshgithub/sfdc-lwc-lightning-datatable that will implement SOQL paging.
+3) Look at something like https://github.com/Sarveshgithub/sfdc-lwc-lightning-datatable that will implement SOQL paging
 
 # future changes
 
+This was built for a very simple scenario, however there are a lot of things that could be added in future including:
+
 * Expose more properties and events from the underlying Data Table
 * More sophisticated paging controls
+* Sorting
