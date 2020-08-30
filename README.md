@@ -18,5 +18,5 @@ You really should not consider using this if:
 
 # future changes
 
-* Expose more properties and events from the underlyging Data Table
+* Expose more properties and events from the underlying Data Table
 * More sophisticated paging controls
