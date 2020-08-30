@@ -1,9 +1,7 @@
 # lwc-datatable-pagination
-A very simple Salesforce LWC data table component with client side paging through data.
+A very simple Salesforce LWC data table component with completely client browser side paging through data.
 
 The Salesforce LWC Data Table https://developer.salesforce.com/docs/component-library/bundle/lightning-datatable/documentation does not support any pagination, so this component extends it with this functionality.
-
-This data table is really simple and is just intended to extend the existing data table with a paging function with as little change as possible. All paging happens on the client side with no SOQL to the backend at all. 
 
 You may want to consider using this if:
 
