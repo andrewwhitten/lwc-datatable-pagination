@@ -1,0 +1,4 @@
+# Salesforce cache
+.sfdx/
+.localdevserver/
+node_modules/
