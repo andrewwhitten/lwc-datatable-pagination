@@ -23,3 +23,5 @@ This was built for a very simple scenario, however there are a lot of things tha
 * Expose more properties and events from the underlying Data Table
 * More sophisticated paging controls
 * Sorting
+* Comprehensive Jest unit tests
+* Version with SOQL based pagination as well
