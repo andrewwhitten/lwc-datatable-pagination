@@ -1,0 +1,30 @@
+<template>
+    <label>This is an extended pagination control for the standard LWC Data Table. You can dynamically change the number of rows displayed.</label>
+
+    <br><br>
+
+    <!--User can specify number of rows to display per page-->
+    <lightning-input 
+        type="number" 
+        name="inputPageSize" 
+        label="Number of rows in each page:" 
+        value="10" 
+        max="100" 
+        min="1" 
+        step="1" 
+        onchange={handlePageSizeChange} 
+        class="pageSizeControl">
+    </lightning-input>
+
+    <br><br>
+
+    <!--The Lightning Datatable Pagination control being demonstrated-->
+    <c-lightning-datatable-pagination
+        key-field='id'
+        source-data={data}
+        columns={columns}
+        display-ammount={pagesize}
+        onrowaction={callRowAction}>
+    </c-lightning-datatable-pagination>
+
+</template>

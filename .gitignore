@@ -2,3 +2,6 @@
 .sfdx/
 .localdevserver/
 node_modules/
+lwc-datatable-pagination/package-lock.json
+lwc-datatable-pagination/.gitignore
+.gitignore

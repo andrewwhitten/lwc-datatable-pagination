@@ -1,0 +1,61 @@
+<template>
+
+    <!--Render data if there is data to show-->
+    <template if:true={pagedData}>
+
+        <!--Data Table that displays the pages data-->
+        <lightning-datatable
+            hide-checkbox-column
+            key-field={keyField}
+            data={pagedData}
+            columns={columns}>
+        </lightning-datatable> 
+
+        <!--Indicate if loading is underway. This should be so fast that it will never be noticed-->
+        <template if:true={loading}>
+            <lightning-dynamic-icon
+                type="ellie"
+                alternative-text="Data is loading."
+                option="3">
+            </lightning-dynamic-icon>Loading...
+        </template>
+
+        <!--Navigation controls-->
+        <div class="slds-var-p-top_small slds-align_absolute-center">
+
+            <!--Previous button-->
+            <lightning-button 
+                name="buttonBackwards" 
+                label="" 
+                title="" 
+                icon-name="utility:back" 
+                onclick={handleButtonPrevious}  
+                class="slds-var-m-left_x-small" 
+                disabled={disabledPreviousButton}>
+            </lightning-button>
+
+            <!--Current Status-->
+            &nbsp;&nbsp;Showing {currentPage} of {maxPages} results.
+
+            <!--Next button-->
+            <lightning-button 
+                name="buttonForwards" 
+                label="" 
+                title="" 
+                icon-name="utility:forward" 
+                onclick={handleButtonNext} 
+                class="slds-var-m-left_x-small" 
+                disabled={disabledNextButton}>
+            </lightning-button>
+        </div>
+
+    </template>
+
+    <!--If there is no data to render, just leave a message-->
+    <template if:false={pagedData}>
+
+        <div>No data to display</div>
+
+    </template>
+
+</template>
